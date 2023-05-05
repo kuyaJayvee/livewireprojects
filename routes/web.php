@@ -3,9 +3,10 @@
 use App\Http\Livewire\Counter;
 use App\Http\Livewire\TodoList;
 use App\Http\Livewire\Calculator;
-use App\Http\Livewire\CascadingDropdown;
+use App\Http\Livewire\ImageUpload;
 use App\Http\Livewire\ProductsSearch;
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\CascadingDropdown;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,4 @@ Route::get('/counter', Counter::class)->name('counter');
 Route::get('/todo-list', TodoList::class)->name('todo-list');
 Route::get('/cascading-dropdown', CascadingDropdown::class)->name('cascading-dropdown');
 Route::get('/products', ProductsSearch::class)->name('products');
+Route::get('/image-upload', ImageUpload::class)->name('image-upload');
