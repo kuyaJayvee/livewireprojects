@@ -1,4 +1,4 @@
-<div class="container mx-auto py-16 px-8 w-1/2">
+<div class="container mx-auto py-16 px-8">
     <div class="mb-4">
         <input type="text" wire:model.lazy="search" placeholder="Search for Products">
     </div>
@@ -15,7 +15,7 @@
         @foreach($products as $product)
             <tr>
                 <td class="py-2 px-3 border-b">{{$product->id}}</td>
-                <td class="py-2 px-3 border-b"><img style="width: 100px" src="{{$product->image}}"/></td>
+                <td class="py-2 px-3 border-b"><img class="w-24" src="{{$product->image}}"/></td>
                 <td class="py-2 px-3 border-b">{{$product->title}}</td>
                 <td class="py-2 px-3 border-b">{{$product->price}}</td>
             </tr>

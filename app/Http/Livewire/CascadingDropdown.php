@@ -14,6 +14,8 @@ class CascadingDropdown extends Component
     public $selectedContinent;
     public $selectedCountry;
 
+    public $disabled = true;
+
     public function mount()
     {
         $this->continents = Continent::all();
@@ -28,7 +30,12 @@ class CascadingDropdown extends Component
     {
         sleep(1);
         if ($this->selectedContinent !== '-1') {
+            $this->disabled = false;
             $this->countries = Country::where('continent_id', $this->selectedContinent)->get();
+        } else {
+            $this->disabled = true;
+            $this->selectedCountry = -1;
         }
     }
+
 }
